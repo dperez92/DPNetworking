@@ -17,9 +17,9 @@ public enum HTTPMethod: String {
 }
 
 public protocol APIProtocol {
-    func httpMethodType() -> HTTPMethod
-    func apiEndPath() -> String
-    func apiBasePath() -> String
+    var httpMethodType: HTTPMethod { get }
+    var apiEndPath: String { get }
+    var apiBasePath: String { get }
 }
 
 public protocol APIModelType {
